@@ -10,11 +10,14 @@ import AdminHome from './pages/AdminHome';
 import EditPolicy from './pages/EditPolicy';
 import 'antd/dist/antd.min.css';
 function App() {
+  const ProtectedRoute=()=>{
+    return localStorage.getItem('user')?<Home />:<Navigate to='/login'/>
+  }
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={<ProtectedRoute />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<Register />} />
           <Route exact path='/userbookings' element={<UserBookings />} />
