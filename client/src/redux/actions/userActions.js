@@ -8,12 +8,11 @@ export const userLogin=(reqObj)=>async dispatch=>{
     try {
         const response = await axios.post('/api/users/login' , reqObj)
         localStorage.setItem('user' , JSON.stringify(response.data))
-        if(response.data.username=="Baba Afrid"){
+        if(response.data.username==="Baba Afrid"){
             message.success('Admin Login success')
         dispatch({type: 'LOADING' , payload:false})
         setTimeout(() => {
             window.location.href='/admin'
-         
         }, 500);
         }
         else{
@@ -26,8 +25,8 @@ export const userLogin=(reqObj)=>async dispatch=>{
         }
         
     } catch (error) {
-        console.log(error)
-        message.error('Something went wrong')
+        console.log(error.response.data.message)
+        message.error(error.response.data.message)
         dispatch({type: 'LOADING' , payload:false})
     }
 }
@@ -41,14 +40,13 @@ export const userRegister=(reqObj)=>async dispatch=>{
         message.success('Registration successfull')
         setTimeout(() => {
             window.location.href='/login'
-         
         }, 500);
        
         dispatch({type: 'LOADING' , payload:false})
         
     } catch (error) {
-        console.log(error)
-        message.error('Something went wrong')
+        console.log(error.response.data.message)
+        message.error(error.response.data.message)
         dispatch({type: 'LOADING' , payload:false})
     }
 }

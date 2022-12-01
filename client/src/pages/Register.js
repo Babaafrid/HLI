@@ -22,7 +22,7 @@ function Register() {
           <img 
           data-aos="zoom-in-up"
           data-aos-duration='1500'
-          className='w-100' src="https://media.istockphoto.com/id/926239074/video/businessman-with-insurance.jpg?s=640x640&k=20&c=cRB8ixsJnDblZQUkcycqIWfCB_76b-bs3ijwIw7Xpz4=" alt="" />
+          className='w-100' src="https://thumbs.dreamstime.com/b/health-insurance-life-insurance-healthcare-protection-health-safety-patients-health-insurance-life-insurance-healthcare-112565207.jpg" alt="" />
         </Col>
         <Col lg={8} className='text-left p-5'>
           <Form layout='vertical' className='login-form p-5' onFinish={onFinish}>
@@ -31,10 +31,10 @@ function Register() {
               <Input />
             </Form.Item>
             <Form.Item name='password' label='Password' rules={[{ required: true }]}>
-              <Input />
+            <Input.Password/>
             </Form.Item>
             <Form.Item name='cpassword' label='Confirm Password' rules={[{ required: true }]}>
-              <Input />
+            <Input.Password/>
             </Form.Item>
             <button className='btn1 mt-2 mb-3'>Register</button>
             <br />

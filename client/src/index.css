@@ -15,7 +15,7 @@ code {
 
 .box1 {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  background-color: lightskyblue
+  background-color: lightseagreen;
 }
 
 h1 {
@@ -48,14 +48,13 @@ p {
 }
 
 .car:hover>.car-content {
-
   opacity: 1;
   transform: translateY(-40px)
 }
 
 .header {
   padding: 8px;
-  background-color: blue;
+  background-color: lightgreen;
 }
 .header .ant-btn{
   box-shadow: none !important;
@@ -97,33 +96,39 @@ p {
 }
 
 .login {
-  background-color: black;
-  padding-top: 60px;
-  min-height: 97vh;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login label,
 .login h1 {
-  color: white !important;
-  opacity: 0.6;
+  color: black !important;
+  opacity: 0.7;
 }
 
 .login-form {
-  background-color: #1F1F1F;
+  width: 400px;
+	height: 470px;
+  background-color: lightblue;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .wallpaper{
-  background-color: wheat;
+  background-color: lightgoldenrodyellow;
 }
-.login-form input {
-  background-color: #333333 !important;
+.login-form input password {
+  background-color: black !important;
   border: none !important;
   color: white;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .login a {
-  color: whitesmoke !important;
-  opacity: 0.5;
+  color: black !important;
+  opacity: 0.7;
 }
 
 .policyimg2{

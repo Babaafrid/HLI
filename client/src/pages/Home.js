@@ -8,6 +8,7 @@ import Spinner from '../components/Spinner';
 import { Rate } from 'antd';
 function Home() {
   const { policies } = useSelector(state => state.policiesReducer)
+  const user = JSON.parse(localStorage.getItem('user'))
   const { loading } = useSelector(state => state.alertsReducer)
   const [totalPolicies, setTotalpolicies] = useState([])
   const dispatch = useDispatch()
@@ -25,7 +26,7 @@ function Home() {
       <Row justify="center" gutter={16} className="mt-2">
         <Col lg={20} sm={24}>
           <div className="d-flex justify-content-between align-items-center">
-            <h3 className="mt-1 mr-2">User Panel</h3>
+            <h3 className="mt-1 mr-2" style={{color:'green',fontStyle:"italic"}}>Welcome {user.username},</h3>
             <button className="btn1">
               <a href="/userbookings" style={{ color: 'white' }}>YOUR POLICIES</a>
             </button>
