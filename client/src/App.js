@@ -9,6 +9,7 @@ import AddPolicy from './pages/AddPolicy';
 import AdminHome from './pages/AdminHome';
 import EditPolicy from './pages/EditPolicy';
 import 'antd/dist/antd.min.css';
+import BuyPolicy from './pages/BuyPolicy';
 function App() {
   const ProtectedRoute=()=>{
     return localStorage.getItem('user')?<Home />:<Navigate to='/login'/>
@@ -22,6 +23,7 @@ function App() {
           <Route exact path='/register' element={<Register />} />
           <Route exact path='/userbookings' element={<UserBookings />} />
           <Route exact path='/booking/:policyid' element={<PolicyBooking />} />
+          <Route exact path='/buypolicy/:policyid' element={<BuyPolicy />} />
           <Route exact path='/addpolicy' element={<AddPolicy />} />
           <Route exact path='/editpolicy/:policyid' element={<EditPolicy />} />
           <Route exact path='/admin' element={<AdminHome />} />

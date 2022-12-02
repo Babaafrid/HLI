@@ -25,9 +25,12 @@ function Register() {
           className='w-100' src="https://thumbs.dreamstime.com/b/health-insurance-life-insurance-healthcare-protection-health-safety-patients-health-insurance-life-insurance-healthcare-112565207.jpg" alt="" />
         </Col>
         <Col lg={8} className='text-left p-5'>
-          <Form layout='vertical' className='login-form p-5' onFinish={onFinish}>
+          <Form layout='vertical' className='login-form p-4' onFinish={onFinish}>
             <h1>Register</h1>
             <Form.Item name='username' label='Username' rules={[{ required: true }]}>
+              <Input />
+            </Form.Item>
+            <Form.Item name='email' label='Email' rules={[{ required: true }]}>
               <Input />
             </Form.Item>
             <Form.Item name='password' label='Password' rules={[{ required: true }]}>

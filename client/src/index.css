@@ -15,7 +15,7 @@ code {
 
 .box1 {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  background-color: lightseagreen;
+  background-color: powderblue;
 }
 
 h1 {
@@ -54,7 +54,7 @@ p {
 
 .header {
   padding: 8px;
-  background-color: lightgreen;
+  background-color: rgb(29, 134, 225);
 }
 .header .ant-btn{
   box-shadow: none !important;
@@ -111,13 +111,13 @@ p {
 
 .login-form {
   width: 400px;
-	height: 470px;
+	height: 510px;
   background-color: lightblue;
   border-radius: 10px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 .wallpaper{
-  background-color: lightgoldenrodyellow;
+  background-color: wheat;
 }
 .login-form input password {
   background-color: black !important;

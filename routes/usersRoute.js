@@ -7,15 +7,10 @@ router.post("/login",async(req,res)=>{
     try{
         const user = await User.findOne({username,password})
         if(user){
-            if(user.password===password){
-                res.send(user);
-            }
-            else{
-                return res.status(401).json({message: "Invalid Username or Password"});
-            }
+            res.send(user);
         }
         else{
-            return res.status(401).json({message: "User doesn't exist"});
+            return res.status(401).json({message: "Invalid Username or Password"});
         }
     }
     catch(error){

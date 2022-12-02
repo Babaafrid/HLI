@@ -1,4 +1,4 @@
-import { Col, Row, Divider,Rate} from "antd";
+import { Col, Row, Divider} from "antd";
 import {CloseSquareOutlined} from '@ant-design/icons';
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -8,8 +8,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Spinner from '../components/Spinner';
 import 'aos/dist/aos.css';
-import StripeCheckout from "react-stripe-checkout";
-import { bookPolicy } from "../redux/actions/bookingActions";
+
 function PolicyBooking() {
   const { policies } = useSelector((state) => state.policiesReducer)
   const { loading } = useSelector((state) => state.alertsReducer)
@@ -24,16 +23,6 @@ function PolicyBooking() {
       setpolicy(policies.find((o) => o._id === policyid));
     }
   }, [policies]);
-
-
-  function onToken(token) {
-    const reqObj = {
-      token,
-      user: JSON.parse(localStorage.getItem("user"))._id,
-      policy: policy._id,
-    };
-    dispatch(bookPolicy(reqObj));
-  }
 
   return (
     <DefaultLayout>
@@ -56,22 +45,17 @@ function PolicyBooking() {
         <Col lg={10} sm={24} xs={24} className="text-right">
           <Divider type="horizontal">Policy Info</Divider>
           <div style={{ textAlign: "right" }}>
-            <h4 style={{textAlign:"center"}}><b>{policy.name}</b></h4>
+            <h4><b>{policy.name}</b></h4>
+            <p>Cost : {policy.cost}/- per month</p>
+            <p>Rating : {policy.rating}</p>
+            <Divider type="horizontal">Policy Description</Divider>
             <p><i>{policy.description}</i></p>
           </div>
             <div>
               <h3>Cost : {policy.cost}</h3>
-              <StripeCheckout
-                billingAddress
-                token={onToken}
-                currency='inr'
-                amount={policy.cost * 100}
-                stripeKey="pk_test_51LfyuySHzp4460YwamOa4wyIl9L9mpH0227Ux0J0g29Ze4O7vBo6qoKCdaOtihSJgnhOxAU6pGWTYe8ZLteZbCoZ00hAl1aRcU"
-              >
                 <button className="btn1">
-                  Buy Policy
+                <Link to={`/buypolicy/${policy._id}`} style={{ color: 'white' }}>Buy Policy</Link>
                 </button>
-              </StripeCheckout>
             </div>
         </Col>
       </Row>

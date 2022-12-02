@@ -39,7 +39,7 @@ function AdminHome() {
       <Row justify='center' gutter={16} className='mt-5'>
         {totalPolicies.map(policy => {
           return <Col lg={5} sm={24} xs={24}>
-            <div className="car p-2 box1 mt-3">
+            <div className="car p-2 box1 mt-3 mb-5">
               <img src={policy.image} className="carimg w-100" alt="" />
               <div className="car-content d-flex align-items-center justify-content-between">
                 <div className='text-left pl-2'>
