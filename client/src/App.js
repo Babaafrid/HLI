@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      
         <Routes>
           <Route exact path='/' element={<ProtectedRoute />} />
           <Route exact path='/login' element={<Login />} />

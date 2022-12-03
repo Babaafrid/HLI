@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import {CloseSquareOutlined} from '@ant-design/icons';
 import {editPolicy, getAllPolicies } from "../redux/actions/policiesActions";
+import AppLogout from './Logout'
 function EditPolicy() {
 
   const { policies } = useSelector((state) => state.policiesReducer);
@@ -35,6 +36,7 @@ function EditPolicy() {
 
   return (
     <DefaultLayout>
+      <AppLogout />
       {loading && (<Spinner />)}
       <div className='d-flex justify-content-between p-2 mt-2'>
       <br />

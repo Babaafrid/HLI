@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Spinner from '../components/Spinner';
 import 'aos/dist/aos.css';
+import AppLogout from './Logout'
 
 function PolicyBooking() {
   const { policies } = useSelector((state) => state.policiesReducer)
@@ -15,6 +16,7 @@ function PolicyBooking() {
   const [policy, setpolicy] = useState({})
   const dispatch = useDispatch()
   const { policyid } = useParams();
+
 
   useEffect(() => {
     if (policies.length === 0) {
@@ -26,6 +28,7 @@ function PolicyBooking() {
 
   return (
     <DefaultLayout>
+      <AppLogout />
       {loading && (<Spinner />)}
       <div className='d-flex justify-content-between p-2 mt-2'>
       <h2><b>{policy.name}</b></h2>

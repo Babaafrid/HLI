@@ -6,6 +6,7 @@ import Spinner from '../components/Spinner'
 import { Link } from 'react-router-dom'
 import {CloseSquareOutlined} from '@ant-design/icons';
 import { addPolicy } from '../redux/actions/policiesActions'
+import AppLogout from './Logout'
 function AddPolicy() {
 
   const dispatch = useDispatch()
@@ -18,6 +19,7 @@ function AddPolicy() {
 
   return (
     <DefaultLayout>
+      <AppLogout />
       {loading && (<Spinner />)}
       <div className='d-flex justify-content-between p-2 mt-2'>
       <br />

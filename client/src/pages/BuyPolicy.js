@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import StripeCheckout from "react-stripe-checkout";
 import { useParams } from "react-router-dom";
 import DefaultLayout from "../components/DefaultLayout";
+import AppLogout from './Logout'
 
 function BuyPolicy() {
     const { policies } = useSelector((state) => state.policiesReducer);
@@ -33,6 +34,7 @@ function BuyPolicy() {
     }
     return (
         <DefaultLayout>
+          <AppLogout />
             {loading && <Spinner />}
             <div className='mr-4 text-right'>
       <Link to={`/booking/${policy._id}`}><CloseSquareOutlined className="mr-3" style={{color:'red', cursor: "pointer"}}/></Link>

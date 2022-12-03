@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import Spinner from '../components/Spinner';
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { Popconfirm,Rate} from "antd"; 
+import AppLogout from './Logout'
 function AdminHome() {
   const { policies } = useSelector(state => state.policiesReducer)
   const { loading } = useSelector(state => state.alertsReducer)
@@ -23,7 +24,7 @@ function AdminHome() {
 
   return (
     <DefaultLayout>
-
+      <AppLogout />
       <Row justify="center" gutter={16} className="mt-2">
         <Col lg={20} sm={24}>
           <div className="d-flex justify-content-between align-items-center">

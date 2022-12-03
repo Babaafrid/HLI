@@ -6,7 +6,8 @@ import { getAllBookings } from "../redux/actions/bookingActions";
 import { Col, Row,Rate } from "antd";
 import { Link } from 'react-router-dom'
 import Spinner from '../components/Spinner';
-import StripeCheckout from "react-stripe-checkout";
+// import StripeCheckout from "react-stripe-checkout";
+import AppLogout from './Logout'
 import moment from "moment";
 function UserBookings() {
 
@@ -20,6 +21,7 @@ function UserBookings() {
 
   return (
     <DefaultLayout>
+      <AppLogout />
       {loading && (<Spinner />)}
       <div className='d-flex justify-content-between p-2 mt-2'>
       <h4><b>My Policies</b></h4>
@@ -32,7 +34,7 @@ function UserBookings() {
             
         {bookings.filter(o=>o.user===user._id).map((booking) => {
           console.log(booking.user)
-             return <Row gutter={16} className="box1 text-left">
+             return <Row gutter={16} className="box1 mt-2 text-left">
                 <Col lg={6} sm={24}>
                     <p><b>{booking.policy.name}</b></p>
                     <p>Id: <b>{booking.policy._id}</b></p>   

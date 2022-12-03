@@ -56,6 +56,14 @@ p {
   padding: 8px;
   background-color: rgb(29, 134, 225);
 }
+
+.header img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: #555;
+}
+
 .header .ant-btn{
   box-shadow: none !important;
   background-color : orangered !important;
