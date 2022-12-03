@@ -8,14 +8,14 @@ app.use('/api/policies/' , require('./routes/policiesRoute'))
 app.use('/api/users/' , require('./routes/usersRoute'))
 app.use('/api/bookings/' , require('./routes/bookingsRoute'))
 
-const path = require('path')
+// const path = require('path')
 
-if(process.env.NODE_ENV==='production'){
-    app.use('/',express.static('client/build'))
-    app.get('*',(req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client/build/index.html'));
-    })
-}
+// if(process.env.NODE_ENV==='production'){
+//     app.use('/',express.static('client/build'))
+//     app.get('*',(req,res)=>{
+//         res.sendFile(path.resolve(__dirname,'client/build/index.html'));
+//     })
+// }
 
 app.get('/', (req, res) => res.send('Hello World!'))
 app.listen(port, () => console.log(`Node JS Server Started in Port ${port}`))
