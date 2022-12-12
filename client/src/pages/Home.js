@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import Spinner from '../components/Spinner';
 import { Rate } from 'antd';
 import AppLogout from './Logout'
+import KommunicateChat from './chat';
 
 function Home() {
   const { policies } = useSelector(state => state.policiesReducer)
@@ -32,6 +33,7 @@ function Home() {
   return (
     <DefaultLayout>
       <AppLogout />
+      <KommunicateChat />
       <Row justify="center" gutter={16} className="mt-2">
         <Col lg={20} sm={24}>
           <Search placeholder="Search Here" onChange={handleChange} enterButton />

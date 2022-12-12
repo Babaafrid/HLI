@@ -49,7 +49,7 @@ function UserBookings() {
                 </Col>
 
                 <Col lg={6} sm={24} className='text-right'>
-                    <img style={{borderRadius:5}} src={booking.policy.image}  height="140" className="p-2" alt={booking.policy.name}/>
+                    <img style={{borderRadius:5}} src={booking.policy.image}  height="130" width='250' className="p-2" alt={booking.policy.name}/>
                     </Col>
               </Row>;
             })}

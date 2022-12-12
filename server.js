@@ -18,4 +18,6 @@ app.use('/api/bookings/' , require('./routes/bookingsRoute'))
 // }
 
 app.get('/', (req, res) => res.send('Hello World!'))
+// app.get('/api/students/login', (req,res)=>res.send('Login Success!'))
+// app.get('/api/students/register', (req,res)=>res.send('Register Success!'))
 app.listen(port, () => console.log(`Node JS Server Started in Port ${port}`))
